@@ -6,8 +6,4 @@
     <RootNamespace>Advent_Of_Code_2020</RootNamespace>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Folder Include="Inputs\" />
-  </ItemGroup>
-
 </Project>
