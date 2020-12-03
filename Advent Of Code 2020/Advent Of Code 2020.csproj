@@ -6,4 +6,8 @@
     <RootNamespace>Advent_Of_Code_2020</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="System.ValueTuple" Version="4.5.0" />
+  </ItemGroup>
+
 </Project>
