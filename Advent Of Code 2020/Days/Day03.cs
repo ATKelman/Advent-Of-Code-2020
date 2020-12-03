@@ -54,7 +54,7 @@ namespace Advent_Of_Code_2020.Days
             int treesHit = 0;
             while (insideMap)
             {
-                xPos = ((xPos + stepsRight) >= _input[yPos].Length) ? (xPos + stepsRight) % _input[yPos].Length : xPos + stepsRight;
+                xPos = (xPos + stepsRight) % _input[yPos].Length;
                 yPos += stepsDown;
 
                 if (yPos >= _input.Count())
