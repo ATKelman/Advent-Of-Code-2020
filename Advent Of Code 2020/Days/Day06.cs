@@ -16,22 +16,22 @@ namespace Advent_Of_Code_2020.Days
 
         public override string SolvePart1()
         {
-            var input = File.ReadAllText(_inputPath).Split("\r\n\r\n");
-
             var count = 0;
-            foreach (var group in input)
+            File.ReadAllText(_inputPath).Split("\r\n\r\n").ToList().ForEach(group => 
+            {
                 count += group.Replace("\r\n", "").ToCharArray().Distinct().Count();
+            });
 
             return count.ToString();
         }
 
         public override string SolvePart2()
         {
-            var input = File.ReadAllText(_inputPath).Split("\r\n\r\n");
-
             var count = 0;
-            foreach (var group in input)
+            File.ReadAllText(_inputPath).Split("\r\n\r\n").ToList().ForEach(group =>
+            {
                 count += group.Split("\r\n", StringSplitOptions.RemoveEmptyEntries).Select(x => x.ToCharArray()).Aggregate<IEnumerable<char>>((prev, next) => prev.Intersect(next)).ToList().Count();
+            });
 
             return count.ToString();
         }
