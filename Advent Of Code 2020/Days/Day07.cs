@@ -37,25 +37,19 @@ namespace Advent_Of_Code_2020.Days
 
         public override string SolvePart2()
         {
-            var count = 0;
-            _input.Where(x => x[0].Contains("shiny gold")).ToList().ForEach(x => 
-            {
-                count += BagsInBag(x);
-            });
-
-            return count.ToString();
+            return BagsInBag(_input.Where(x => x[0].Contains("shiny gold")).First()).ToString();
         }
 
         private int BagsInBag(string[] bag)
         {
-            var bagsInBag = Regex.Matches(bag[1], "[0-9] \\w* \\w*");
             int sum = 0;
+            var bagsInBag = Regex.Matches(bag[1], "[0-9] \\w* \\w*");         
             foreach (var b in bagsInBag)
             {
                 var amount = int.Parse(b.ToString().Substring(0, 1));
                 var bagName = b.ToString().Substring(2, b.ToString().Length - 2);
 
-                var newBag = _input.Where(x => x[0].Contains(bagName)).ToList().First();
+                var newBag = _input.Where(x => x[0].Contains(bagName)).First();
                 sum += amount + (amount * BagsInBag(newBag));
             }
 
