@@ -45,7 +45,8 @@ namespace Advent_Of_Code_2020.Days
             });
             onesInARow[rowCount]++;
 
-            // Two 1's in a row have 2 options, 3 1's in a row have 4 and 4 1's have 7. There cannot be more that 4 1's in a row.
+            // You have to include edge values that jump 3 to the next value. 1's in a row indicate values jumping by 1, two 1's in a row is equal to 3 values e.g. 4,5,6. 
+            // Two 1's in a row have 2 options, 3 1's in a row have 4 and 4 1's have 7. 
             var result = Math.Pow(2, onesInARow[2]) * Math.Pow(4, onesInARow[3]) * Math.Pow(7, onesInARow[4]);
             return result.ToString();
         }
