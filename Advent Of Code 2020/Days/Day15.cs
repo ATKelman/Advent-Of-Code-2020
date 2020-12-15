@@ -6,7 +6,7 @@ using System.Text;
 
 namespace Advent_Of_Code_2020.Days
 {
-    class Day15 : DayBase
+    public class Day15 : DayBase
     {
         public Day15(int day)
             : base(day)
