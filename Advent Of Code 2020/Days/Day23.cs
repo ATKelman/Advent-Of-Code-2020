@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Advent_Of_Code_2020.Days
 {
-    class Day20 : DayBase
+    class Day23 : DayBase
     {
-        public Day20(int day)
+        public Day23(int day)
             : base(day)
-        { 
+        {
 
         }
 

@@ -7,8 +7,6 @@ namespace Advent_Of_Code_2020.Days
 {
     class Day21 : DayBase
     {
-        private List<int> seatIds = new List<int>();
-
         public Day21(int day)
             : base(day)
         {
